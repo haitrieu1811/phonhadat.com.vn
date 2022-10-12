@@ -1,0 +1,143 @@
+#header{
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--border-color)
+}
+
+.navbar{
+    width: var(--app-width);
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu */
+.navbar__directional{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo-link{
+    margin-right: 12px;
+}
+
+.navbar__logo-img{
+
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu-item{
+    position: relative;
+    margin-left: 8px;
+}
+
+.navbar__menu-link{
+    color: var(--black-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.navbar__sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-color);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 8px 0;
+    min-width: 180px;
+    border-radius: 4px;
+    display: none;
+}
+
+.navbar__menu-item:hover .navbar__sub-menu{
+    display: block;
+}
+
+.navbar__sub-menu-item{
+
+}
+
+.navbar__sub-menu-link{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 8px 10px;
+    display: block;
+}
+
+.navbar__sub-menu-link:hover{
+    background-color: var(--grey-color);
+}
+
+/* Account */
+.navbar__account{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__account-buttons{   
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar__account-buttons-link{
+    color: var(--text-color);
+    padding: 8px 0;
+}
+
+.navbar__account-buttons-seperate{
+    margin: 0 8px;
+}
+
+.logged-user{
+    position: relative;
+}
+
+.logged-user__avatar{
+    --size: 36px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.logged-user__actions{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 8px 0;
+    display: none;
+}
+
+.logged-user:hover .logged-user__actions{
+    display: block;
+}
+
+.logged-user__actions-item{
+
+}
+
+.logged-user__actions-link{
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1.4rem;
+    padding: 8px 16px;
+    display: block;
+}
+
+.logged-user__actions-link:hover{
+    background-color: var(--grey-color);
+}

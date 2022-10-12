@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Public+Sans:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Spectral:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    /* Colors */
+    --primary-color: #4f46e5;
+    --red-color: #e02424;
+    --green-color: #057a55;
+    --blue-color: #60a5fa;
+    --yellow-color: #e3a008;
+    --white-color: #fff;
+    --black-color: #1f2937;
+    --purple-color: #7e3af2;
+    --border-color: #edecec;
+    --text-color: #333;
+    --grey-color: #EDEDED;
+
+    --hover-color-1: #a8a8aa;
+
+    /* Size */
+    --app-width: 1100px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#app{
+
+}

@@ -1,0 +1,72 @@
+.auth-wp{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 0;
+}
+
+.auth{
+    width: 420px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth__logo-link{
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.auth__logo-img{
+    
+}
+
+.auth__logo-text{
+    color: var(--white-color);
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-left: 8px;
+}
+
+.auth__form{
+    border-radius: 6px;
+    padding: 48px 36px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+}
+
+.auth__form-heading{
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+    color: var(--black-color);
+    text-transform: capitalize;
+}
+
+.auth__options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+    font-size: 1.5rem;
+}
+
+.auth__text{
+    color: var(--text-color);
+    user-select: none;
+}
+
+.auth__link{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.auth__link:hover{
+    text-decoration: underline;
+}
