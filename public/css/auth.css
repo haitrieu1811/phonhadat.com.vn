@@ -70,3 +70,255 @@
 .auth__link:hover{
     text-decoration: underline;
 }
+
+/* Profile */
+.profile{
+    --space: 70px;
+}
+
+.profile-banner{
+    position: relative;
+    padding: 180px 0;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.profile-banner__info{
+    position: absolute;
+    bottom: calc(0px - var(--space));
+    left: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.profile-banner__avatar{
+    --size: 150px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white-color);
+}
+
+.profile-banner__name{
+    font-size: 3rem;
+    color: var(--black-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-banner__tick{
+    color: var(--tick-color);
+    margin-left: 4px;
+    font-size: 2rem;
+}
+
+.profile-content{
+    margin-top: calc(var(--space) + 40px);
+}
+
+.profile-box{
+    padding: 24px;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.profile-box + .profile-box{
+    margin-top: 24px;
+}
+
+.profile-box__head{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-box__head-label{
+    font-size: 2rem;
+    color: var(--black-color);
+}
+
+.profile-box__head-link{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.profile-box__head-link:hover{
+    text-decoration: underline;
+}
+
+.profile-box__body{
+}
+
+.bio{
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 20px 20px;
+    margin-bottom: 24px;
+}
+
+.bio::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--border-color);
+}
+
+.profile__info-list{
+
+}
+
+.profile__info-item{
+    display: flex;
+    align-items: center;
+}
+
+.profile__info-item + .profile__info-item{
+    margin-top: 12px;
+}
+
+.profile__info-item-icon{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 12px;
+}
+
+.profile__info-item-text,
+.profile__info-item-link{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.profile__info-item-text{
+    color: var(--text-color);
+}
+
+.profile__info-item-link{
+    color: var(--primary-color);
+}
+
+.profile__info-item-link:hover{
+    text-decoration: underline;
+}
+
+.account-grid{
+
+}
+
+.account-grid__item{
+    text-align: center;
+    margin-bottom: 24px;
+}   
+
+.account-grid__avatar{
+    --size: 80px;
+    width: var(--size);
+    width: 100%;
+    height: var(--size);
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.account-grid__name{
+    color: var(--black-color);
+    font-size: 1.4rem;
+    margin-top: 6px;
+}
+
+.account-grid__item:hover .account-grid__name{
+    text-decoration: underline;
+}
+
+/* Status post */
+.status-post{
+}
+
+.status-post__control{
+    display: flex;
+}
+
+.status-post__avatar{
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.status-post__input{
+    border: 2px solid var(--border-color);
+    outline: none;
+    width: 100%;
+    resize: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.status-post__input:focus{
+    border-color: var(--primary-color);
+}
+
+.status-post__actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.status-post__action-list{
+    display: flex;
+    align-items: center;
+}
+
+.status-post__action-item{
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.status-post__action-item:hover{
+    background-color: var(--grey-color);
+    cursor: pointer;
+}
+
+.status-post__action-item + .status-post__action-item{
+    margin-left: 12px;
+}
+
+.status-post__action-icon{
+    font-size: 1.6rem;
+    color: var(--black-color);
+    margin-right: 6px;
+}
+
+.status-post__action-label{
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.visible{
+    display: none;
+}

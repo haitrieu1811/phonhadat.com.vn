@@ -1,0 +1,47 @@
+.owl-carousel-home,
+.owl-carousel-project{
+    --button-size: 38px;
+}
+
+.owl-carousel-home .item img{
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.owl-carousel-home .owl-nav,
+.owl-carousel-project .owl-nav{
+    position: absolute;
+    top: 50%;
+    left: calc(0px - var(--button-size) / 2);
+    right: calc(0px - var(--button-size) / 2);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.owl-carousel-home .owl-prev,
+.owl-carousel-home .owl-next,
+.owl-carousel-project .owl-prev,
+.owl-carousel-project .owl-next{
+    width: var(--button-size);
+    height: var(--button-size);
+    border-radius: 50%;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    pointer-events: all;
+}
+
+.owl-carousel-home .owl-prev i,
+.owl-carousel-home .owl-next i,
+.owl-carousel-project .owl-prev i,
+.owl-carousel-project .owl-next i{
+    font-size: 1.5rem;
+    color: #4b4b4b;
+}
+
+.owl-carousel-home .owl-dots{
+    display: none;
+}

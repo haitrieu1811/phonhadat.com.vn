@@ -1,0 +1,162 @@
+/* Basic class */
+.mt-1{
+    margin-top: 12px;
+  }
+  
+  .mt-2{
+    margin-top: 24px;
+  }
+  
+  .mt-3{
+    margin-top: 36px;
+  }
+  
+  .mt-4{
+    margin-top: 48px;
+  }
+  
+  .mt-5{
+    margin-top: 60px;
+  }
+  
+  .py-1{
+    padding: 12px 0;
+  }
+  
+  .py-2{
+    padding: 24px 0;
+  }
+  
+  .py-3{
+    padding: 36px 0;
+  }
+  
+  .py-4{
+    padding: 48px 0;
+  }
+  
+  .py-5{
+    padding: 60px 0;
+  }
+  
+  .flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* Heading section */
+.heading-section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .heading-section ~ .heading-section{
+    margin-top: 60px;
+  }
+  
+  .heading-section::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .heading-section__title{
+    font-size: 1.6rem;
+    padding: 12px 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  .heading-section__actions{
+  
+  }
+  
+  .heading-section__link{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .heading-section__link:hover{
+    color: var(--red-color);
+  }
+  
+  .heading-section__link-icon{
+    font-size: 1.4rem;
+    margin-left: 6px;
+  }
+  
+  .heading-section__separate{
+    margin: 0 6px;
+    font-size: 1.6rem;
+    color: var(--grey-2-color);
+  }
+
+  
+/* See more */
+.see-more{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .see-more__link{
+    color: var(--grey-2-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .see-more__link:hover{
+    color: var(--red-color);
+  }
+  
+  .see-more__icon{
+    margin-left: 4px;
+    font-size: 1.3rem;
+  }
+
+/* Badge */
+.badge{
+  position: relative;
+  display: inline-block;
+  color: var(--black-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.badge::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  border-radius: inherit;
+  opacity: 0.1;
+}
+
+.badge.badge-success{
+  color: var(--green-color);
+}
+
+.badge.badge-danger{
+  color: var(--red-color);
+}
+
+.badge.badge-warning{
+  color: var(--yellow-color);
+}
+
+.badge.badge-info{
+  color: var(--blue-color);
+}

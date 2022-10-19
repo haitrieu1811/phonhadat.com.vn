@@ -1,5 +1,7 @@
 @extends('layouts.onlyContent')
 
+@section('title', 'Đăng nhập | phonhadat.com.vn')
+
 @section('content')
     {{-- <div class="container">
         <div class="row justify-content-center">
@@ -81,7 +83,7 @@
     <div class="auth-wp"
         style="background-image: url({{ asset('images/bg/bg-01.jpg') }}); background-size: cover; background-position:center; background-repeat: no-repeat">
         <div class="auth">
-            <a href="{{ route('home') }}" class="auth__logo-link">
+            <a href="{{ url('/') }}" class="auth__logo-link">
                 <img src="{{ asset('images/logo/logo.svg') }}" class="auth__logo-img" alt="">
                 <span class="auth__logo-text">Flowbite</span>
             </a>

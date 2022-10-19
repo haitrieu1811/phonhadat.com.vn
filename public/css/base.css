@@ -1,34 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Public+Sans:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&family=Spectral:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Public+Sans:wght@900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
     /* Colors */
     --primary-color: #4f46e5;
-    --red-color: #e02424;
+    --red-color: #ff1e1e;
     --green-color: #057a55;
     --blue-color: #60a5fa;
     --yellow-color: #e3a008;
+    --orange-color: #fe631a;
     --white-color: #fff;
     --black-color: #1f2937;
     --purple-color: #7e3af2;
     --border-color: #edecec;
+    --tick-color: #1877f2;
     --text-color: #333;
     --grey-color: #EDEDED;
-
+    --grey-2-color: #757575;
+    --grey-bg-color: #fafafa;
     --hover-color-1: #a8a8aa;
+    --like-color: #0573e5;
+    --heart-color: #e92244;
+    --emoji-color: #fac34f;
 
     /* Size */
-    --app-width: 1100px;
+    --app-width: 1150px;
+    --header-height: 56px;
   }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+*::selection{
+  color: var(--white-color);
+  background-color: var(--primary-color);
 }
 
 html {
   font-size: 62.5%;
+}
+
+/* Scrollbar */
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 4px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ul{
@@ -41,4 +69,9 @@ a{
 
 #app{
 
+}
+
+#header + #content{
+  min-height: 100vh;
+  padding: var(--header-height) 0;
 }

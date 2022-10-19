@@ -1,6 +1,6 @@
 @extends('layouts.onlyContent')
 
-@section('title', 'Đặt lại mật khẩu')
+@section('title', 'Quên mật khẩu | phonhadat.com.vn')
 
 @section('content')
     {{-- <div class="container">
@@ -53,7 +53,7 @@
     <div class="auth-wp"
         style="background-image: url({{ asset('images/bg/bg-01.jpg') }}); background-size: cover; background-position:center; background-repeat: no-repeat">
         <div class="auth">
-            <a href="{{ route('home') }}" class="auth__logo-link">
+            <a href="{{ url('/') }}" class="auth__logo-link">
                 <img src="{{ asset('images/logo/logo.svg') }}" class="auth__logo-img" alt="">
                 <span class="auth__logo-text">Flowbite</span>
             </a>
@@ -65,7 +65,7 @@
                     </div>
                 @endif
 
-                <h2 class="auth__form-heading">Đặt lại mật khẩu</h2>
+                <h2 class="auth__form-heading">Quên mật khẩu</h2>
                 <form method="POST" action="{{ route('password.email') }}">
                     @csrf
 
