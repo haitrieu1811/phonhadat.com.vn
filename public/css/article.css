@@ -2,6 +2,10 @@
 
 }
 
+.article ~ .article{
+    margin-top: 24px;
+}
+
 .article-head{
     display: flex;
     justify-content: space-between;
@@ -190,15 +194,26 @@
 }
 
 .article-foot__action{
+    position: relative;
     flex: 1;
     font-size: 1.5rem;
-    padding: 12px 0;
+    padding: 6px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
-.article-foot__action>div{
+.article-foot__actions .article-foot__action-emoji-released .article-foot__action{
+    display: none; /*Hide all emoji*/
+}
+
+.article-foot__actions .article-foot__action-emoji-released .article-foot__action.active/*,
+.article-foot__actions .article-foot__action-emoji-released .article-foot__action.article-foot__action-like*/{
+    display: flex; /*Emoji released*/
+}
+
+.article-foot__action .article-foot__action-emoji-released>div{
     display: flex;
     align-items: center;
 }
@@ -222,24 +237,12 @@ img.article-foot__action-icon--fill{
     width: 18px;
 }
 
-.article-foot__action--like .article-foot__action-icon--fill{
-    color: var(--like-color);
-}
-
-.article-foot__action--heart .article-foot__action-icon--fill{
-    color: var(--heart-color);
-}
-
-.article-foot__action--haha .article-foot__action-icon--fill{
-    color: var(--emoji-color);
+.article-foot__action.article-foot__action-like-fill .article-foot__action-icon--fill{
+    color: var(--like-color); /*Like active*/
 }
 
 .article-foot__action.active .article-foot__action-icon--fill{
     display: inline;
-}
-
-.article-foot__action.active .article-foot__action-icon--empty{
-    display: none;
 }
 
 .article-foot__action-label{
@@ -247,14 +250,20 @@ img.article-foot__action-icon--fill{
     font-weight: 600;
 }
 
-.article-foot__action.active .article-foot__action--like .article-foot__action-label{
+.article-foot__action.active.article-foot__action-like-fill .article-foot__action-label{
     color: var(--like-color);
 }
 
-.article-foot__action.active .article-foot__action--heart .article-foot__action-label{
+.article-foot__action.active.article-foot__action-heart .article-foot__action-label{
     color: var(--heart-color);
 }
 
-.article-foot__action.active .article-foot__action--haha .article-foot__action-label{
+.article-foot__action.active.article-foot__action-haha .article-foot__action-label,
+.article-foot__action.active.article-foot__action-wow .article-foot__action-label,
+.article-foot__action.active.article-foot__action-sad .article-foot__action-label{
     color: var(--emoji-color);
+}
+
+.article-foot__action.active.article-foot__action-angry .article-foot__action-label{
+    color: var(--angry-color);
 }

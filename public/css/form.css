@@ -1,8 +1,11 @@
 input,
 select,
-button{
+button,
+textarea{
     border: none;
     outline: none;
+    resize: none;
+    line-height: 1.5;
 }
 
 .form-group{
@@ -37,13 +40,17 @@ button{
     border-color: var(--primary-color);
 }
 
-.form-group--invalid.form-group--invalid .form-control{
+.form-control[disabled]{
+    cursor: not-allowed;
+}
+
+.form-group.form-group--invalid .form-control{
     border-color: var(--red-color);
     background-color: #fef2f2;
     color: var(--red-color);
 }
 
-.form-group--invalid.form-group--invalid .form-control::placeholder{
+.form-group.form-group--invalid .form-control::placeholder{
     color: var(--red-color);
 }
 
@@ -52,4 +59,35 @@ button{
     font-size: 1.3rem;
     display: block;
     margin-top: 6px;
+}
+
+.form-submit{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-submit:hover{
+    opacity: 0.9;
+}
+
+.form-group__avatar{
+    --size: 80px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.form-group__cover{
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
 }

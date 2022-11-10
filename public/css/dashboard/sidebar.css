@@ -1,0 +1,118 @@
+#sidebar{
+    --padding-x: 24px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: var(--admin-sidebar-width);
+    max-width: var(--admin-sidebar-width);
+    background-color: #404e67;
+}
+
+.sidebar-logo{
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.sidebar-logo__img{
+    margin-right: 12px;
+}
+
+.sidebar-logo__text{
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+.sidebar-navigation{
+    max-height: 100%;
+    overflow-y: overlay;
+}
+
+.sidebar-navigation__item{
+
+}
+
+.sidebar-navigation__item + .sidebar-navigation__item{
+    margin-top: 24px;
+}
+
+.sidebar-navigation__item-heading{
+    color: #999;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    padding: 12px var(--padding-x);
+}
+
+.sidebar-navigation__item-list{
+}
+
+.sidebar-navigation__item-list-item{
+    border-left: 3px solid transparent;
+}
+
+.sidebar-navigation__item-list-item + .sidebar-navigation__item-list-item{
+    margin-top: 12px;
+}
+
+.sidebar-navigation__item-list-item.active {
+    border-color: var(--primary-color);
+}
+
+.sidebar-navigation__item-list-item-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #dcdcdc;
+    padding: 12px var(--padding-x);
+}
+
+.sidebar-navigation__item-list-item-link:hover{
+    color: var(--white-color);
+}
+
+.sidebar-navigation__item-list-item-label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.sidebar-navigation__item-list-item-label-icon{
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.sidebar-navigation__item-list-item-label-text{
+
+}
+
+.sidebar-navigation__item-list-item-arrow{
+    width: 20px;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+
+.sidebar-navigation__item-list-item.active .sidebar-navigation__item-list-item-arrow{
+    transform: rotate(90deg);
+}
+
+.sidebar-navigation__item-submenu{
+
+}
+
+.sidebar-navigation__item-submenu-item{
+}
+
+.sidebar-navigation__item-submenu-item-link{
+    display: block;
+    padding: 12px calc(var(--padding-x) + 12px);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #dcdcdc;
+}
+
+.sidebar-navigation__item-submenu-item-link:hover{
+    text-decoration: underline;
+}

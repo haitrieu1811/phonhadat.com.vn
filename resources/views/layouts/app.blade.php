@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('images/logo/logo.svg') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -16,6 +17,10 @@
     {{-- OWL Carousel --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    {{-- Fancy box --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
     {{-- Font awsome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -50,10 +55,10 @@
                             <a href="" class="navbar__menu-link">Dự án</a>
                         </li>
                         <li class="navbar__menu-item">
-                            <a href="" class="navbar__menu-link">Tin tức</a>
+                            <a href="{{ route('post.show') }}" class="navbar__menu-link">Tin tức</a>
                         </li>
                         <li class="navbar__menu-item">
-                            <a href="" class="navbar__menu-link">Sản phẩm</a>
+                            <a href="{{ route('product.show') }}" class="navbar__menu-link">Sản phẩm</a>
                         </li>
                         <li class="navbar__menu-item">
                             <a href="" class="navbar__menu-link">Danh bạ</a>
@@ -88,8 +93,8 @@
                         </div>
                     @else
                         {{-- Product saved --}}
-                        <div class="navbar__popper navbar__product-saved">
-                            <i class="navbar__popper-icon fa-solid fa-heart"></i>
+                        {{-- <div class="navbar__popper navbar__product-saved">
+                            <i class="navbar__popper-icon fa-regular fa-heart"></i>
                             <span class="navbar__popper-badge">28</span>
                             <div class="navbar__popper-main">
                                 <header class="navbar__popper-head">
@@ -126,11 +131,11 @@
                                     @endfor
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
 
                         {{-- Notification --}}
-                        <div class="navbar__popper navbar__notification">
-                            <i class="navbar__popper-icon fa-solid fa-bell"></i>
+                        {{-- <div class="navbar__popper navbar__notification">
+                            <i class="navbar__popper-icon fa-regular fa-bell"></i>
                             <span class="navbar__popper-badge">28</span>
                             <div class="navbar__popper-main">
                                 <header class="navbar__popper-head">
@@ -168,24 +173,32 @@
                                     @endfor
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
 
                         {{-- Logged user --}}
                         <div class="logged-user">
-                            <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
-                                alt="" class="logged-user__avatar">
+                            @php
+                                $account = Auth::user();
+                            @endphp
+
+                            <img src="{{ asset("images/user/{$account->avatar}") }}" alt=""
+                                class="logged-user__avatar">
 
                             <ul class="logged-user__actions">
                                 <li class="logged-user__actions-item">
                                     <a href="{{ route('dashboard') }}" class="logged-user__actions-link">Dashboard</a>
                                 </li>
                                 <li class="logged-user__actions-item">
-                                    <a href="{{ route('account.profile', Auth::id()) }}"
-                                        class="logged-user__actions-link">Trang cá
+                                    <a href="{{ route('chat.show') }}" class="logged-user__actions-link"
+                                        target="blank">Chat</a>
+                                </li>
+                                <li class="logged-user__actions-item">
+                                    <a href="{{ route('account.profile') }}" class="logged-user__actions-link">Trang cá
                                         nhân</a>
                                 </li>
                                 <li class="logged-user__actions-item">
-                                    <a href="" class="logged-user__actions-link">Cập nhật thông tin</a>
+                                    <a href="{{ route('account.update') }}" class="logged-user__actions-link">Cập nhật
+                                        thông tin</a>
                                 </li>
                                 <li class="logged-user__actions-item">
                                     <a href="" class="logged-user__actions-link"
@@ -193,8 +206,7 @@
                                     document.getElementById('logout-form').submit();">Đăng
                                         xuất</a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </li>
@@ -293,6 +305,9 @@
 
     <!-- Scripts -->
     <script type="module" src="{{ asset('js/main.js') }}"></script>
+    <script type="module" src="{{ asset('js/emoji.js') }}"></script>
+    <script type="module" src="{{ asset('js/carousel.js') }}"></script>
+    <script type="module" src="{{ asset('js/home.js') }}"></script>
 </body>
 
 </html>

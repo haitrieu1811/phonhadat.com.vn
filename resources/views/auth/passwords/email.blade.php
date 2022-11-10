@@ -3,66 +3,17 @@
 @section('title', 'Quên mật khẩu | phonhadat.com.vn')
 
 @section('content')
-    {{-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Reset Password') }}</div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        <form method="POST" action="{{ route('password.email') }}">
-                            @csrf
-
-                            <div class="row mb-3">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Send Password Reset Link') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="auth-wp"
         style="background-image: url({{ asset('images/bg/bg-01.jpg') }}); background-size: cover; background-position:center; background-repeat: no-repeat">
         <div class="auth">
             <a href="{{ url('/') }}" class="auth__logo-link">
                 <img src="{{ asset('images/logo/logo.svg') }}" class="auth__logo-img" alt="">
-                <span class="auth__logo-text">Flowbite</span>
+                <span class="auth__logo-text">{{ env('APP_NAME') }}</span>
             </a>
 
             <div class="auth__form">
                 @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
+                    {!! html_alert(session('status')) !!}
                 @endif
 
                 <h2 class="auth__form-heading">Quên mật khẩu</h2>

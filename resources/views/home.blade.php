@@ -3,22 +3,6 @@
 @section('title', 'Trang chủ | phonhadat.com.vn')
 
 @section('content')
-    {{-- <div class="container">
-        <div class="card">
-            <div class="card-header">{{ __('Dashboard') }}</div>
-
-            <div class="card-body">
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
-
-                {{ __('You are logged in!') }}
-            </div>
-        </div>
-    </div> --}}
-
     <div class="grid wide">
         <div class="carousel-home">
             {{-- Carousel --}}
@@ -57,49 +41,56 @@
                         <div class="grid">
                             <div class="row">
                                 <div class="col l-4 m-12 c-12">
+                                    @php
+                                        $slug = Str::slug($large_post->title);
+                                    @endphp
+
                                     <div class="large-post">
-                                        <a href="">
-                                            <img src="https://file4.batdongsan.com.vn/crop/610x342/2022/10/05/wxbwknn6/20221005162517-8228.jpg"
+                                        <a href="{{ route('post.detail', [$slug, $large_post->id]) }}">
+                                            <img src="{{ asset("images/post/{$large_post->thumbnail}") }}"
                                                 class="large-post__thumb" />
                                         </a>
-                                        <a href="">
-                                            <h3 class="large-post__title">Mẫu Hợp Đồng Góp Vốn Mua Đất Và 3 Rủi Ro Cần Lưu
-                                                Ý</h3>
+                                        <a href="{{ route('post.detail', [$slug, $large_post->id]) }}">
+                                            <h3 class="large-post__title">{{ $large_post->title }}</h3>
                                         </a>
                                         <p class="large-post__time">
-                                            <i class="large-post__time-icon fa-regular fa-calendar"></i> 13/10/2022
+                                            <i class="large-post__time-icon fa-regular fa-calendar"></i>
+                                            {{ $large_post->created_at }}
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col l-4 m-12 c-12">
-                                    @for ($i = 0; $i < 4; $i++)
+                                    @foreach ($posts_1 as $post)
+                                        @php
+                                            $slug = Str::slug($post->title);
+                                        @endphp
+
                                         <div class="post">
-                                            <a href="" class="post-thumb-wp">
-                                                <img src="https://file4.batdongsan.com.vn/crop/610x342/2022/10/05/wxbwknn6/20221005162517-8228.jpg"
-                                                    alt="" class="post-thumb">
+                                            <a href="{{ route('post.detail', [$slug, $post->id]) }}" class="post-thumb-wp">
+                                                <img src="{{ asset("images/post/{$post->thumbnail}") }}" alt=""
+                                                    class="post-thumb">
                                             </a>
                                             <div class="post-info">
-                                                <a href="">
-                                                    <h2 class="post-info__title">Mẫu Hợp Đồng Góp Vốn Mua Đất Và 3 Rủi Ro
-                                                        Cần
-                                                        Lưu Ý</h2>
+                                                <a href="{{ route('post.detail', [$slug, $post->id]) }}">
+                                                    <h2 class="post-info__title">{{ $post->title }}</h2>
                                                 </a>
                                                 <p class="post-info__time">
-                                                    <i class="post-info__time-icon fa-regular fa-calendar"></i> 13/10/2022
+                                                    <i class="post-info__time-icon fa-regular fa-calendar"></i>
+                                                    {{ $post->created_at }}
                                                 </p>
                                             </div>
                                         </div>
-                                    @endfor
+                                    @endforeach
                                 </div>
                                 <div class="col l-4 m-12 c-12">
                                     @for ($i = 0; $i < 4; $i++)
                                         <div class="post">
-                                            <a href="" class="post-thumb-wp">
+                                            <a href="{{ route('post.detail', ['slug-test', 1]) }}" class="post-thumb-wp">
                                                 <img src="https://file4.batdongsan.com.vn/crop/610x342/2022/10/05/wxbwknn6/20221005162517-8228.jpg"
                                                     alt="" class="post-thumb">
                                             </a>
                                             <div class="post-info">
-                                                <a href="">
+                                                <a href="{{ route('post.detail', ['slug-test', 1]) }}">
                                                     <h2 class="post-info__title">Mẫu Hợp Đồng Góp Vốn Mua Đất Và 3 Rủi Ro
                                                         Cần
                                                         Lưu Ý</h2>
@@ -138,13 +129,13 @@
                                 <span>Nổi bật</span>
                             </span>
 
-                            <a href="">
+                            <a href="{{ route('product.detail', ['slug', 1]) }}">
                                 <img src="https://file4.batdongsan.com.vn/crop/257x147/2022/10/03/20221003203538-f07d_wm.jpeg"
                                     class="product__thumb" alt="">
                             </a>
 
                             <div class="product__info">
-                                <a href="">
+                                <a href="{{ route('product.detail', ['slug', 1]) }}">
                                     <h3 class="product__title">
                                         Tôi cần bán Shophouse mặt phố Xuân La, Tây Hồ, đang cho thuê dài
                                         hạn. LH
@@ -155,7 +146,7 @@
                                 </div>
                                 <div class="product__location">Ba Đình, Hà Nội</div>
                                 <div class="product__foot">
-                                    <a href="" class="product__broker">
+                                    <a href="{{ route('account.profile', 1) }}" class="product__broker">
                                         <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
                                             class="product__broker-avatar" alt="">
                                         <h4 class="product__broker-name">Trần Hải Triều</h4>

@@ -3,7 +3,6 @@
 @import url(./form.css);
 @import url(./button.css);
 @import url(./auth.css);
-@import url(./alert.css);
 @import url(./carousel.css);
 @import url(./home.css);
 @import url(./post.css);
@@ -12,3 +11,4 @@
 @import url(./project.css);
 @import url(./article.css);
 @import url(./emoji.css);
+@import url(./chat.css);

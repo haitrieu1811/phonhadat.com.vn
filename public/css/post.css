@@ -89,3 +89,224 @@
     margin-right: 4px;
 }
 
+/* Post detail */
+.post-detail{
+
+}
+
+.post-detail__stage{
+    padding-top: 48px;
+}
+
+.post-detail__title{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.post-detail__stage-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.post-detail__author{
+    display: flex;
+    align-items: center;
+}
+
+.post-detail__author-avatar{
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-detail__author-info{
+    margin-left: 12px;
+}
+
+.post-detail__author-name{
+    color: var(--black-color);
+    font-size: 1.6rem;
+}
+
+.post-detail__author-tick{
+    color: var(--tick-color);
+    font-size: 1.2rem;
+    margin-left: 4px;
+}
+
+.post-detail__author-name:hover{
+    text-decoration: underline;
+}
+
+.post-detail__public-time{
+    color: var(--grey-2-color);
+    font-size: 1.3rem;
+}
+
+.post-detail__share{
+    position: relative;
+}   
+
+.post-detail__share-dots{
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.post-detail__share-dots:hover{
+    background-color: var(--grey-color);
+    cursor: pointer;
+}
+
+.post-detail__share-list{
+    --space: 5px;
+    position: absolute;
+    top: calc(100% + var(--space));
+    right: 0;
+    border-radius: 4px;
+    padding: 6px 0;
+    background-color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    display: none;
+}
+
+.post-detail__share-list::before{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: var(--space);
+}
+
+.post-detail__share:hover .post-detail__share-list{
+    display: block;
+}
+
+.post-detail__share-item{
+    white-space: nowrap;
+    padding: 12px 24px;
+}
+
+.post-detail__share-item:hover{
+    cursor: pointer;
+    background-color: var(--grey-color);
+}
+
+.post-detail__share-item-icon{
+    color: var(--black-color);
+    text-align: center;
+    margin-right: 6px;
+    font-size: 1.6rem;
+}
+
+.post-detail__share-item-label{
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.post-detail__stage-body{
+
+}
+
+.post-detail__stage-body p{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin: 24px 0;
+    text-align: justify;
+}
+
+.post-detail__stage-body h1,
+.post-detail__stage-body h2,
+.post-detail__stage-body h3,
+.post-detail__stage-body h4,
+.post-detail__stage-body h5,
+.post-detail__stage-body h6{
+    color: var(--black-color);
+    font-size: 2rem;
+}
+
+.post-detail__stage-body img{
+    max-width: 90%;
+    border-radius: 12px;
+}
+
+.post-detail__stage-body a{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.post-detail__stage-body a:hover{
+    text-decoration: underline;
+}
+
+.post-detail__stage-body table{
+    border: none;
+}
+
+.post-detail__stage-body table td{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+/* Foot */
+.post-detail__stage-foot{
+    margin-top: 48px;
+}
+
+.post-detail__stage-foot-list{
+    margin-top: 24px;
+}
+
+.post-detail__stage-foot-item{
+    position: relative;
+    padding-left: 30px;
+}
+
+.post-detail__stage-foot-item::before{
+    --size: 8px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.post-detail__stage-foot-item + .post-detail__stage-foot-item{
+    margin-top: 16px;
+}
+
+.post-detail__stage-foot-item-link{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.post-detail__stage-foot-item-link:hover{
+    text-decoration: underline;
+}
+
+.post-detail__stage-foot-item-separate{
+    margin: 0 4px;
+}
+
+.post-detail__stage-foot-item-time{
+    color: var(--black-color);
+    font-size: 1.4rem;
+    line-height: 1.8;
+}

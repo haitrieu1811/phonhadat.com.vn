@@ -1,16 +1,27 @@
+/* Button size */
 .owl-carousel-home,
-.owl-carousel-project{
+.owl-carousel-project,
+.owl-carousel-product-detail{
     --button-size: 38px;
 }
 
+/* Image */
 .owl-carousel-home .item img{
     height: 420px;
     object-fit: cover;
     border-radius: 16px;
 }
 
+.owl-carousel-product-detail .item img{
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Nav */
 .owl-carousel-home .owl-nav,
-.owl-carousel-project .owl-nav{
+.owl-carousel-project .owl-nav,
+.owl-carousel-product-detail .owl-nav{
     position: absolute;
     top: 50%;
     left: calc(0px - var(--button-size) / 2);
@@ -22,10 +33,13 @@
     pointer-events: none;
 }
 
+/* Button */
 .owl-carousel-home .owl-prev,
 .owl-carousel-home .owl-next,
 .owl-carousel-project .owl-prev,
-.owl-carousel-project .owl-next{
+.owl-carousel-project .owl-next,
+.owl-carousel-product-detail .owl-prev,
+.owl-carousel-product-detail .owl-next{
     width: var(--button-size);
     height: var(--button-size);
     border-radius: 50%;
@@ -34,14 +48,18 @@
     pointer-events: all;
 }
 
+/* Icon */
 .owl-carousel-home .owl-prev i,
 .owl-carousel-home .owl-next i,
 .owl-carousel-project .owl-prev i,
-.owl-carousel-project .owl-next i{
+.owl-carousel-project .owl-next i,
+.owl-carousel-product-detail .owl-prev i,
+.owl-carousel-product-detail .owl-next i{
     font-size: 1.5rem;
     color: #4b4b4b;
 }
 
+/* Dot */
 .owl-carousel-home .owl-dots{
     display: none;
 }

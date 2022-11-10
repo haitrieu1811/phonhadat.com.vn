@@ -1,0 +1,108 @@
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: var(--admin-header-height);
+    background-color: rgba(246, 247, 249, 0.1);
+    backdrop-filter: blur(32px);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.navbar{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.header-left{
+
+}
+
+.header-right{
+
+}
+
+.header-account{
+    --space: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-account__avatar{
+    --size: 34px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.header-account__welcome{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    margin-left: 8px;
+}
+
+.header-account__welcome-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header-account__welcome-chevron{
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+.header-account__actions{
+    position: absolute;
+    top: calc(100% + var(--space));
+    right: 0;
+    background-color: var(--white-color);
+    padding: 4px 0;
+    border-radius: 4px;
+    display: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.header-account:hover .header-account__actions{
+    display: block;
+}
+
+.header-account__actions::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: var(--space);
+}
+
+.header-account__action-item{
+    
+}
+
+.header-account__action-link{
+    display: block;
+    padding: 10px 25px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.header-account__action-link:hover{
+    background-color: var(--grey-color);
+}
+
+.header-account__action-icon{
+    margin-right: 8px;
+}
+
+.header-account__action-label{
+
+}

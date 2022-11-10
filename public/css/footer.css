@@ -36,7 +36,7 @@
     --size: 45px;
     position: fixed;
     bottom: 50px;
-    right: 20px;
+    right: 30px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
